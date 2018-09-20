@@ -1,0 +1,41 @@
+{
+    "name": "garie-pagespeed-insights",
+    "version": "0.0.1",
+    "description": "Google Pagespeed insights image for performance metrics",
+    "license": "MIT",
+    "repository": "boyney123/garie-pagespeed-insights",
+    "author": {
+        "name": "David Boyne",
+        "email": "davidboyne123@hotmail.co.uk"
+    },
+    "engines": {
+        "node": ">=6"
+    },
+    "scripts": {
+        "test": "PAGESPEED_INSIGHTS_KEY=1234 ENV=test jest --coverage --config jest.config.json",
+        "test:watch": "PAGESPEED_INSIGHTS_KEY=1234 ENV=test jest --watch --notify --notifyMode=change --coverage --config jest.config.json",
+        "start": "node ./src/index.js"
+    },
+    "files": [
+        "index.js"
+    ],
+    "keywords": [
+        ""
+    ],
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "cron": "^1.4.1",
+        "express": "^4.16.3",
+        "influx": "^5.0.7",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.2",
+        "winston": "^3.0.0"
+    },
+    "devDependencies": {
+        "codecov": "^3.0.0",
+        "jest": "^23.5.0",
+        "nock": "^10.0.0",
+        "prettier": "1.13.7",
+        "supertest": "^3.3.0"
+    }
+}

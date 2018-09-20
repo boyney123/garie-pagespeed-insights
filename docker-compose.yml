@@ -1,0 +1,28 @@
+version: '3'
+services:
+    influxdb:
+        image: 'influxdb:latest'
+        ports:
+            - 8086:8086
+        environment:
+            - INFLUXDB_ADMIN_USER=admin
+            - INFLUXDB_ADMIN_PASSWORD=admin
+    garie-pagespeed-insights:
+        image: 'garie-pagespeed-insights:latest'
+        privileged: true
+        volumes:
+            - /var/run/docker.sock:/run/docker.sock
+            - /usr/local/bin/docker:/bin/docker
+        ports:
+            - 3000:3000
+        environment:
+            - HOST=influxdb
+            - PAGESPEED_INSIGHTS_KEY=YOUR_KEY
+        depends_on:
+            - influxdb
+    chronograf:
+        image: 'chronograf:latest'
+        ports:
+            - 8888:8888
+        depends_on:
+            - influxdb

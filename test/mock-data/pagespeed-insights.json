@@ -1,0 +1,295 @@
+{
+    "captchaResult": "CAPTCHA_NOT_NEEDED",
+    "kind": "pagespeedonline#result",
+    "id": "https://developers.google.com/speed/pagespeed/insights/",
+    "responseCode": 200,
+    "title": "PageSpeed Insights",
+    "ruleGroups": {
+        "SPEED": {
+            "score": 99
+        }
+    },
+    "loadingExperience": {
+        "id": "https://developers.google.com/speed/pagespeed/insights/",
+        "metrics": {
+            "FIRST_CONTENTFUL_PAINT_MS": {
+                "median": 673,
+                "distributions": [
+                    {
+                        "min": 0,
+                        "max": 1459,
+                        "proportion": 0.8533036405886909
+                    },
+                    {
+                        "min": 1459,
+                        "max": 2736,
+                        "proportion": 0.09221367710523404
+                    },
+                    {
+                        "min": 2736,
+                        "proportion": 0.05448268230607502
+                    }
+                ],
+                "category": "FAST"
+            },
+            "DOM_CONTENT_LOADED_EVENT_FIRED_MS": {
+                "median": 572,
+                "distributions": [
+                    {
+                        "min": 0,
+                        "max": 1940,
+                        "proportion": 0.9199569197630587
+                    },
+                    {
+                        "min": 1940,
+                        "max": 3874,
+                        "proportion": 0.04594248788368337
+                    },
+                    {
+                        "min": 3874,
+                        "proportion": 0.03410059235325795
+                    }
+                ],
+                "category": "FAST"
+            }
+        },
+        "overall_category": "FAST",
+        "initial_url": "https://developers.google.com/speed/pagespeed/insights/"
+    },
+    "pageStats": {
+        "numberResources": 12,
+        "numberHosts": 7,
+        "totalRequestBytes": "1961",
+        "numberStaticResources": 7,
+        "htmlResponseBytes": "72726",
+        "overTheWireResponseBytes": "370861",
+        "cssResponseBytes": "8426",
+        "imageResponseBytes": "5035",
+        "javascriptResponseBytes": "970700",
+        "otherResponseBytes": "14467",
+        "numberJsResources": 5,
+        "numberCssResources": 1,
+        "numTotalRoundTrips": 16,
+        "numRenderBlockingRoundTrips": 0
+    },
+    "formattedResults": {
+        "locale": "en_US",
+        "ruleResults": {
+            "AvoidLandingPageRedirects": {
+                "localizedRuleName": "Avoid landing page redirects",
+                "ruleImpact": 0.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format": "Your page has no redirects. Learn more about {{BEGIN_LINK}}avoiding landing page redirects{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/AvoidRedirects"
+                        }
+                    ]
+                }
+            },
+            "EnableGzipCompression": {
+                "localizedRuleName": "Enable compression",
+                "ruleImpact": 0.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format": "You have compression enabled. Learn more about {{BEGIN_LINK}}enabling compression{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/EnableCompression"
+                        }
+                    ]
+                }
+            },
+            "LeverageBrowserCaching": {
+                "localizedRuleName": "Leverage browser caching",
+                "ruleImpact": 1.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format":
+                        "Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network."
+                },
+                "urlBlocks": [
+                    {
+                        "header": {
+                            "format": "{{BEGIN_LINK}}Leverage browser caching{{END_LINK}} for the following cacheable resources:",
+                            "args": [
+                                {
+                                    "type": "HYPERLINK",
+                                    "key": "LINK",
+                                    "value": "https://developers.google.com/speed/docs/insights/LeverageBrowserCaching"
+                                }
+                            ]
+                        },
+                        "urls": [
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.google.com/recaptcha/api.js?render=explicit&hl=%27en_US%27"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "5 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.googletagmanager.com/gtag/js?id=UA-22137612-2"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "15 minutes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "result": {
+                                    "format": "{{URL}} ({{LIFETIME}})",
+                                    "args": [
+                                        {
+                                            "type": "URL",
+                                            "key": "URL",
+                                            "value": "https://www.google-analytics.com/analytics.js"
+                                        },
+                                        {
+                                            "type": "DURATION",
+                                            "key": "LIFETIME",
+                                            "value": "2 hours"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "MainResourceServerResponseTime": {
+                "localizedRuleName": "Reduce server response time",
+                "ruleImpact": 0.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format": "Your server responded quickly. Learn more about {{BEGIN_LINK}}server response time optimization{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/Server"
+                        }
+                    ]
+                }
+            },
+            "MinifyCss": {
+                "localizedRuleName": "Minify CSS",
+                "ruleImpact": 0.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format": "Your CSS is minified. Learn more about {{BEGIN_LINK}}minifying CSS{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                        }
+                    ]
+                }
+            },
+            "MinifyHTML": {
+                "localizedRuleName": "Minify HTML",
+                "ruleImpact": 0.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format": "Your HTML is minified. Learn more about {{BEGIN_LINK}}minifying HTML{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                        }
+                    ]
+                }
+            },
+            "MinifyJavaScript": {
+                "localizedRuleName": "Minify JavaScript",
+                "ruleImpact": 0.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format": "Your JavaScript content is minified. Learn more about {{BEGIN_LINK}}minifying JavaScript{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                        }
+                    ]
+                }
+            },
+            "MinimizeRenderBlockingResources": {
+                "localizedRuleName": "Eliminate render-blocking JavaScript and CSS in above-the-fold content",
+                "ruleImpact": 0.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format": "You have no render-blocking resources. Learn more about {{BEGIN_LINK}}removing render-blocking resources{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/BlockingJS"
+                        }
+                    ]
+                }
+            },
+            "OptimizeImages": {
+                "localizedRuleName": "Optimize images",
+                "ruleImpact": 0.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format": "Your images are optimized. Learn more about {{BEGIN_LINK}}optimizing images{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/OptimizeImages"
+                        }
+                    ]
+                }
+            },
+            "PrioritizeVisibleContent": {
+                "localizedRuleName": "Prioritize visible content",
+                "ruleImpact": 0.0,
+                "groups": ["SPEED"],
+                "summary": {
+                    "format": "You have the above-the-fold content properly prioritized. Learn more about {{BEGIN_LINK}}prioritizing visible content{{END_LINK}}.",
+                    "args": [
+                        {
+                            "type": "HYPERLINK",
+                            "key": "LINK",
+                            "value": "https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "version": {
+        "major": 1,
+        "minor": 15
+    }
+}

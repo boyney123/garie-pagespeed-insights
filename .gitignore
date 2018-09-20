@@ -1,0 +1,8 @@
+node_modules
+.vscode
+yarn.lock
+.nyc_output
+coverage
+logs/*.log
+.DS_STORE
+reports/*
