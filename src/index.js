@@ -19,8 +19,8 @@ app.use('/collect', collect);
 
 const getDataForAllUrls = async () => {
     for (const item of urls) {
+        const { url } = item;
         try {
-            const { url } = item;
             const data = await getData(url);
             await saveData(url, data);
         } catch (err) {

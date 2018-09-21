@@ -15,8 +15,16 @@ const getData = async url => {
                 json: true
             });
             const { pageStats } = data;
+            const insightData = {};
+
+            // convert any string values into ints
+            Object.keys(pageStats).forEach(item => {
+                const val = typeof pageStats[item] === 'string' ? parseInt(pageStats[item]) : pageStats[item];
+                insightData[item] = val;
+            });
+
             logger.info(`Successfull got data for ${url}`);
-            resolve(pageStats);
+            resolve(insightData);
         } catch (err) {
             logger.warn(`Failed to get data for ${url}`, err);
             reject(`Failed to get data for ${url}`);
